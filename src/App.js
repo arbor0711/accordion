@@ -1,14 +1,11 @@
-import SingleQuestion from './Question';
-
+import React, { Component } from "react";
+import InfoBox from "./Infobox";
 
 function App() {
   return (
-    <div className="container">
-      <h3>سوالی برایتان پیش آمده؟</h3>
-      <div className="info">
-        <SingleQuestion />
-      </div>
-    </div>
+    <>
+      <InfoBox />
+    </>
   );
 }
 
