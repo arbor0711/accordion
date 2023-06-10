@@ -1,8 +1,21 @@
+import { useState } from "react";
 import Question from "./Question";
+import data from "./data";
+
 function InfoBox() {
+  const [questions, setQuestions] = useState(data);
   return (
     <div className="container">
-      <Question data={""} />
+      <section className="info-box">
+        <h3>Do you have any questions?</h3>
+
+        {questions.map((question) => {
+          return <Question {...question} />;
+          //   or we could easily define props here
+          // return <Question q={question} />
+          // then in Question.js
+        })}
+      </section>
     </div>
   );
 }

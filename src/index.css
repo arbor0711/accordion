@@ -35,6 +35,7 @@ body {
   box-shadow: 0 0 5px gray;
   width: 60vw;
   padding: 10px;
+  margin-bottom: 10px;
 }
 .question header {
   display: flex;

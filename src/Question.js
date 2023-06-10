@@ -1,25 +1,21 @@
 import { useState } from "react";
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
-
-function Question({ props }) {
-  const [showInfo, setShowInfo] = useState("false");
+// in here we could write
+// function Question ({q})
+// And then when we need them  invoke them as below
+// {q.title} or {q.info}
+function Question({ title, info }) {
+  const [showInfo, setShowInfo] = useState(false);
   return (
-    <section className="info-box">
-      <h3>Do you have any questions?</h3>
-      <div className="question">
-        <header>
-          <h4>Question 1?</h4>
-          <span onClick={() => setShowInfo(!showInfo)}>
-            {showInfo ? <AiOutlineMinusCircle /> : <AiOutlinePlusCircle />}{" "}
-          </span>
-        </header>
-        {showInfo && (
-          <p>
-            Duis sint incididunt ea culpa eu est commodo mollit laboris fugiat.
-          </p>
-        )}
-      </div>
-    </section>
+    <div className="question">
+      <header>
+        <h4>{title}</h4>
+        <span onClick={() => setShowInfo(!showInfo)}>
+          {showInfo ? <AiOutlineMinusCircle /> : <AiOutlinePlusCircle />}{" "}
+        </span>
+      </header>
+      {showInfo && <p>{info} </p>}
+    </div>
   );
 }
 
