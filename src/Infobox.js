@@ -9,8 +9,8 @@ function InfoBox() {
       <section className="info-box">
         <h3>Do you have any questions?</h3>
 
-        {questions.map((question) => {
-          return <Question {...question} />;
+        {questions.map((question, index) => {
+          return <Question key={index} {...question} />;
           //   or we could easily define props here
           // return <Question q={question} />
           // then in Question.js
