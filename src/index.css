@@ -37,6 +37,7 @@ body {
   padding: 10px;
   margin-bottom: 10px;
 }
+
 .question header {
   display: flex;
   justify-content: space-between;
@@ -48,4 +49,11 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+.question h4 {
+  color: #333;
+}
+
+.question p {
+  color: #444;
 }
